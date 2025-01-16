@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="growattServerSR",
-    version="1.7.1",
+    version="1.7.2",
     author="Simon Rankine",
     author_email="simon@srankine.uk",
     description="A package to talk to growatt server - forked from the original by @indykoning",
