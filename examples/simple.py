@@ -1,4 +1,4 @@
-import growattServer
+import growattServerSR as growattServer
 
 api = growattServer.GrowattApi()
 login_response = api.login(<username>, <password>)

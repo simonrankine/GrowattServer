@@ -1,4 +1,4 @@
-import growattServer
+import growattServerSR as growattServer
 import sys
 import json
 '''

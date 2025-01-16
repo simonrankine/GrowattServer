@@ -4,6 +4,7 @@ import requests
 from random import randint
 import warnings
 import hashlib
+import json
 
 name = "growattServer"
 

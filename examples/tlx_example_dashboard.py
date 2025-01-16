@@ -1,5 +1,4 @@
-
-import growattServer
+import growattServerSR as growattServer
 import getpass
 
 # Example script fetching key power and today+total energy metrics from a Growatt MID-30KTL3-XH (TLX) + APX battery hybrid system 
