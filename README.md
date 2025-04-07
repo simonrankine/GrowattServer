@@ -194,6 +194,27 @@ Known working settings & parameters are as follows (all parameter values are str
     * `param16`: Schedule 3 - End time - Hour e.g. "02" (2am)
     * `param17`: Schedule 3 - End time - Minute e.g. "00" (0 minutes)
     * `param18`: Schedule 3 - Enabled/Disabled (0 = Disabled, 1 = Enabled)
+* **Hybrid inverter AC discharge times**
+  * function: `api.update_mix_inverter_setting`
+  * setting type: `mix_ac_discharge_time_period`
+  * params:
+    * `param1`: Discharge rate % (value between 0 and 100)
+    * `param2`: Stop discharge Statement of Charge % (value between 0 and 100)
+    * `param3`: Schedule 1 - Start time - Hour e.g. "01" (1am)
+    * `param4`: Schedule 1 - Start time - Minute e.g. "00" (0 minutes)
+    * `param5`: Schedule 1 - End time - Hour e.g. "02" (2am)
+    * `param6`: Schedule 1 - End time - Minute e.g. "00" (0 minutes)
+    * `param7`: Schedule 1 - Enabled/Disabled (0 = Disabled, 1 = Enabled)
+    * `param8`: Schedule 2 - Start time - Hour e.g. "01" (1am)
+    * `param9`: Schedule 2 - Start time - Minute e.g. "00" (0 minutes)
+    * `param10`: Schedule 2 - End time - Hour e.g. "02" (2am)
+    * `param11`: Schedule 2 - End time - Minute e.g. "00" (0 minutes)
+    * `param12`: Schedule 2 - Enabled/Disabled (0 = Disabled, 1 = Enabled)
+    * `param13`: Schedule 3 - Start time - Hour e.g. "01" (1am)
+    * `param14`: Schedule 3 - Start time - Minute e.g. "00" (0 minutes)
+    * `param15`: Schedule 3 - End time - Hour e.g. "02" (2am)
+    * `param16`: Schedule 3 - End time - Minute e.g. "00" (0 minutes)
+    * `param17`: Schedule 3 - Enabled/Disabled (0 = Disabled, 1 = Enabled)
 * **AC-coupled inverter AC charge times**
   * function: `api.update_ac_inverter_setting`
   * setting type: `spa_ac_charge_time_period`
