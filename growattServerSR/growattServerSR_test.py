@@ -5,17 +5,15 @@ from growattServerSR import map_mix_settings_to_ac_charge_time_period, map_mix_s
 class TestGrowattServer(unittest.TestCase):
 
   def test_map_mix_settings_to_ac_charge_time_period(self):
-    test_data = json.loads(MAP_SETTINGS_OUTPUT)
-    actual = map_mix_settings_to_ac_charge_time_period(test_data)
-    self.assertListEqual(json.loads(EXPECTED_CHARGE_SCHEDULE), actual)
+    actual = map_mix_settings_to_ac_charge_time_period(MAP_SETTINGS_OUTPUT)
+    self.assertListEqual(EXPECTED_CHARGE_SCHEDULE, actual)
 
   def test_map_mix_settings_to_ac_discharge_time_period(self):
-    test_data = json.loads(MAP_SETTINGS_OUTPUT)
-    actual = map_mix_settings_to_ac_discharge_time_period(test_data)
-    self.assertListEqual(json.loads(EXPECTED_DISCHARGE_SCHEDULE), actual)
+    actual = map_mix_settings_to_ac_discharge_time_period(MAP_SETTINGS_OUTPUT)
+    self.assertListEqual(EXPECTED_DISCHARGE_SCHEDULE, actual)
 
 
-EXPECTED_CHARGE_SCHEDULE = """[
+EXPECTED_CHARGE_SCHEDULE = [
 "100",
 "50",
 "1",
@@ -27,9 +25,9 @@ EXPECTED_CHARGE_SCHEDULE = """[
 "0",
 "04", "06",
 "07", "00",
-"0"]"""
+"0"]
 
-EXPECTED_DISCHARGE_SCHEDULE = """[
+EXPECTED_DISCHARGE_SCHEDULE = [
 "100",
 "40",
 "16", "00",
@@ -40,9 +38,9 @@ EXPECTED_DISCHARGE_SCHEDULE = """[
 "0",
 "00", "00",
 "00", "00",
-"0"]"""
+"0"]
 
-MAP_SETTINGS_OUTPUT = """{
+MAP_SETTINGS_OUTPUT = {
   "deviceType": 0,
   "msg": "msg",
   "result": 1,
@@ -53,14 +51,14 @@ MAP_SETTINGS_OUTPUT = """{
       "mix_ac_discharge_frequency": "0",
       "communicationVersion": "ZCBA-0006",
       "singleExport": "0",
-      "dischargeTime3": null,
+      "dischargeTime3": None,
       "bagingTestStep": "0",
       "chargePowerCommand": "100",
       "uwLVRT2EE": "0.0",
       "ccCurrent": "0.0",
-      "dischargeTime2": null,
-      "dischargeTime1": null,
-      "record": null,
+      "dischargeTime2": None,
+      "dischargeTime1": None,
+      "record": None,
       "deviceType": "0",
       "vbatStartforCharge": "58.0",
       "uwHFRTTime2EE": "0",
@@ -78,7 +76,7 @@ MAP_SETTINGS_OUTPUT = """{
       "loadFirstStopSocSet": "10",
       "inPower": "20.0",
       "puEnable": "0",
-      "powerMaxTime": null,
+      "powerMaxTime": None,
       "vbatWarnClr": "5.0",
       "forcedDischargeTimeStop2": "0:0",
       "uwHFRT2EE": "0.0",
@@ -138,16 +136,16 @@ MAP_SETTINGS_OUTPUT = """{
       "batTempLowerLimitC": "110.0",
       "batTempLowerLimitD": "110.0",
       "safetyNum": "00",
-      "userName": null,
+      "userName": None,
       "comAddress": "1",
       "pv_reactive_p_rate": "100",
       "uwLVRTTimeEE": "0",
       "uwHFRTTimeEE": "0",
       "bctAdjust": "0",
-      "chargeTime3": null,
-      "chargeTime2": null,
+      "chargeTime3": None,
+      "chargeTime2": None,
       "energyDay": "0.0",
-      "chargeTime1": null,
+      "chargeTime1": None,
       "statusText": "mix.status.normal",
       "forcedChargeTimeStart2": "3:5",
       "forcedChargeTimeStart3": "4:6",
@@ -158,7 +156,7 @@ MAP_SETTINGS_OUTPUT = """{
       "forcedChargeTimeStart6": "0:0",
       "forcedChargeTimeStart4": "0:0",
       "forcedChargeTimeStart5": "0:0",
-      "plantname": null,
+      "plantname": None,
       "vbatWarning": "480.0",
       "gridFirstSwitch1": "0",
       "gridFirstSwitch2": "0",
@@ -166,7 +164,7 @@ MAP_SETTINGS_OUTPUT = """{
       "gridFirstSwitch3": "0",
       "lcdLanguage": "1",
       "pv_reactive_p_rate_two": "over",
-      "children": null,
+      "children": None,
       "lost": "false",
       "safety": "05",
       "model": "1683926900000",
@@ -177,7 +175,7 @@ MAP_SETTINGS_OUTPUT = """{
       "serialNum": "OUCTCGP08S",
       "uwLVRTTime2EE": "0",
       "disChargePowerCommand": "100",
-      "powerMax": null,
+      "powerMax": None,
       "forcedDischargeStopSwitch2": "0",
       "forcedDischargeStopSwitch1": "1",
       "forcedDischargeStopSwitch6": "0",
@@ -202,7 +200,7 @@ MAP_SETTINGS_OUTPUT = """{
       "proPto": "0",
       "forcedDischargeTimeStart5": "0:0",
       "forcedDischargeTimeStart4": "0:0",
-      "batSerialNum": null,
+      "batSerialNum": None,
       "exportLimitPowerRate": "0.0",
       "forcedDischargeTimeStart6": "0:0",
       "oldErrorFlag": "0",
@@ -263,6 +261,6 @@ MAP_SETTINGS_OUTPUT = """{
   },
   "normalPower": 0,
   "model": ""
-}"""
+}
 
 unittest.main()
