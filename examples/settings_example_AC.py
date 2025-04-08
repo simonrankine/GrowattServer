@@ -24,11 +24,14 @@ else:
     endM = '{:02.0f}'.format(int(sys.argv[5]))
     run = str(sys.argv[6])
 
-api = growattServer.GrowattApi()
+api = growattServer.GrowattApi(add_random_user_id=True,agent_identifier="Rankinehousehold")
 
 # This part needs to be adapted by the user
-login_response = api.login('USERNAME_AS_STRING',
-                           'PASSWORD_AS_STRING')
+login_response = api.login('Rankinehousehold',
+                           '$fB2tw#dbY&Xy8jq')
+
+print(json.dumps(api.get_mix_inverter_settings("OUCTCGP08S"), indent=2))
+
 
 if login_response['success']:
     # Get a list of growatt plants.
