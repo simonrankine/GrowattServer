@@ -28,7 +28,7 @@ api = growattServer.GrowattApi(add_random_user_id=True,agent_identifier="Rankine
 
 # This part needs to be adapted by the user
 login_response = api.login('Rankinehousehold',
-                           '$fB2tw#dbY&Xy8jq')
+                           '<password>')
 
 print(json.dumps(api.get_mix_inverter_settings("OUCTCGP08S"), indent=2))
 
